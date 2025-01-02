@@ -1,5 +1,10 @@
+import Banner from "../../Componentes/Banner";
+
 export default function SobreMin(){
     return(
-        <h1>Sobre Mim...</h1>
+        <main>
+            <Banner/>
+            <h1>Sobre Mim...</h1>
+        </main>
     )
 }

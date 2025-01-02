@@ -2,13 +2,13 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Inicio from "./pages/Inicio";
 import SobreMim from "./pages/SobreMim";
 import Menu from "./Componentes/Menu";
+import Rodape from "./Componentes/Rodape";
 
 
 function AppRoutes() {
   return (
       <BrowserRouter>
         <Menu/>
-        
         
         <Routes>
           <Route
@@ -26,6 +26,8 @@ function AppRoutes() {
 
 
         </Routes>
+
+        <Rodape/>
       </BrowserRouter>
   );
 }

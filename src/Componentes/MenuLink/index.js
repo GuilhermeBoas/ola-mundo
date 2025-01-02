@@ -12,5 +12,6 @@ export default function MenuLink({ children, to }) {
             {children}
         </Link>
     )
-
+// trocar o Link para o NavLink
+//https://cursos.alura.com.br/course/React-desenvolvendo-react-router-javaScript/task/112284
 }
