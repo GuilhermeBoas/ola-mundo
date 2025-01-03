@@ -3,32 +3,40 @@ import Inicio from "./pages/Inicio";
 import SobreMim from "./pages/SobreMim";
 import Menu from "./Componentes/Menu";
 import Rodape from "./Componentes/Rodape";
+import PaginaPadrão from "./Componentes/PaginaPadrao";
+import Post from "./pages/Post";
+import NaoEncontrada from "./pages/NaoEncontrada";
+import ScrollToTop from "./Componentes/ScrollToTop";
 
 
 function AppRoutes() {
   return (
-      <BrowserRouter>
-        <Menu/>
+    <BrowserRouter>
+      <ScrollToTop/>
+      <Menu />
+
+      <Routes>
+
+        <Route path="/" element={<PaginaPadrão />}>
+          <Route index element={<Inicio />}/>
+
+          <Route path="sobremim" element={<SobreMim />}/>
+          
+          
+        </Route>
         
-        <Routes>
-          <Route
-            path="/"
-            element={<Inicio />}
-          />
-          <Route
-            path="/sobremim"
-            element={<SobreMim />}
-          />
-          <Route
-            path="*"
-            element={<div>Pagina Não Encontrada</div>}
-          />
+        <Route path="posts/:id" element={<Post/>}/>
+        <Route
+          path="*"
+          element={<NaoEncontrada/>}
+        />
 
 
-        </Routes>
+      </Routes>
 
-        <Rodape/>
-      </BrowserRouter>
+      <Rodape />
+
+    </BrowserRouter>
   );
 }
 
